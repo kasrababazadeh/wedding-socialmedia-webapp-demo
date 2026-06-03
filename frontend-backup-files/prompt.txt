@@ -1,0 +1,111 @@
+based on the following project information and frontend folder structure is the written code for each file correct?if not please correct it and if there is missing one write it
+
+I am creating a web app that couples that want to get married can register in this website and get donations from people who want to help them
+So i want to develop the frontend first using nextjs react tailwind typescript
+A home page with navbar footer and some content sections
+A page that couples can register and upload their images for their album
+A profile page for couples to see their information like story album and etc
+A page that shows all of our couples
+A page that a couple can see the donations they got
+A page that people are donating can see their own donates
+A page for admin to see the couples and donations all
+a page with donation methods which people can select how they want to donate to the selected couple
+An about us page for website
+This website will be rtl because it is persian website and will respect the best practices as well
+What should be the fronted folder structure for this project?
+
+
+│   next.config.js
+│   package.json
+│   postcss.config.js
+│   README.md
+│   tailwind.config.js
+│   tsconfig.json
+│
+├───public
+│   │   favicon.ico
+│   │   robots.txt
+│   │
+│   └───assets
+│       ├───icons
+│       └───images
+│               default-couple.png
+│               logo.svg
+│
+└───src
+    ├───app
+    │   │   layout.tsx
+    │   │   page.tsx
+    │   │
+    │   ├───about
+    │   │       page.tsx
+    │   │
+    │   ├───admin
+    │   │       page.tsx
+    │   │
+    │   ├───couples
+    │   │   │   page.tsx
+    │   │   │
+    │   │   ├───register
+    │   │   │       page.tsx
+    │   │   │
+    │   │   └───[id]
+    │   │           page.tsx
+    │   │
+    │   ├───donate
+    │   │   └───[coupleId]
+    │   │           page.tsx
+    │   │
+    │   ├───donations
+    │   │   └───[coupleId]
+    │   │           page.tsx
+    │   │
+    │   └───my-donations
+    │           page.tsx
+    │
+    ├───components
+    │   ├───admin
+    │   │       AdminCoupleTable.tsx
+    │   │       AdminDonationTable.tsx
+    │   │
+    │   ├───common
+    │   │       Footer.tsx
+    │   │       Layout.tsx
+    │   │       Navbar.tsx
+    │   │       Seo.tsx
+    │   │
+    │   ├───couples
+    │   │       AlbumUploader.tsx
+    │   │       CoupleCard.tsx
+    │   │       CoupleForm.tsx
+    │   │       CoupleProfileHeader.tsx
+    │   │
+    │   ├───donations
+    │   │       DonationItem.tsx
+    │   │       DonationList.tsx
+    │   │       DonationMethodSelector.tsx
+    │   │
+    │   └───forms
+    │           Button.tsx
+    │           FileUploader.tsx
+    │           Input.tsx
+    │           TextArea.tsx
+    │
+    ├───contexts
+    │       AuthContext.tsx
+    │
+    ├───hooks
+    │       useAuth.ts
+    │       useFetch.ts
+    │       useRTL.ts
+    │
+    ├───lib
+    │       api.ts
+    │       types.ts
+    │
+    ├───styles
+    │       globals.css
+    │       rtl.css
+    │
+    └───utils
+            validation.ts
